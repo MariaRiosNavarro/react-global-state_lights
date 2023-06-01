@@ -8,8 +8,8 @@ export default function App({ Component, pageProps }) {
   // function handleToggle() {
   //   setIsOn((isOn) => !isOn);
   // }
-  
-  //isOn={isOn} handleToggle={handleToggle} 
+
+  //isOn={isOn} handleToggle={handleToggle}
 
   return (
     <Layout>
@@ -23,7 +23,7 @@ lightsArray = [
   { id: "1", name: "Living Room", isOn: false },
   { id: "2", name: "Kitchen", isOn: false },
   { id: "3", name: "Bedroom", isOn: false },
-  { id: "1", name: "Bathroom", isOn: false },
-  { id: "2", name: "Garage", isOn: false },
-  { id: "3", name: "Porch", isOn: false },
+  { id: "4", name: "Bathroom", isOn: false },
+  { id: "5", name: "Garage", isOn: false },
+  { id: "6", name: "Porch", isOn: false },
 ];
