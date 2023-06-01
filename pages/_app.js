@@ -8,11 +8,13 @@ export default function App({ Component, pageProps }) {
   // function handleToggle() {
   //   setIsOn((isOn) => !isOn);
   // }
+  
+  //isOn={isOn} handleToggle={handleToggle} 
 
   return (
     <Layout>
       <GlobalStyle />
-      <Component {...pageProps} isOn={isOn} handleToggle={handleToggle} />
+      <Component {...pageProps} />
     </Layout>
   );
 }
