@@ -1,12 +1,10 @@
 import Link from "../components/Link";
 
-export default function HomePage({ lightState, lightsOn }) {
+export default function HomePage({ lightsOn }) {
   return (
     <div>
       <h1>Home</h1>
-      <p>
-        {lightState} light(s) are {lightsOn}.
-      </p>
+      <p>{lightsOn} light(s) are on.</p>
       <p>
         <Link href="/lights">All lights →</Link>
       </p>

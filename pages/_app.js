@@ -16,9 +16,9 @@ export default function App({ Component, pageProps }) {
 
   function handleToggleLight(id) {
     // Update the lights array using the functional form of setState
-    setLightState((lightState) => {
+    setLightState((lightState) =>
       // Map over each light object in the lights array
-      return lightState.map((light) => {
+      lightState.map((light) => {
         // Check if the current light's id matches the provided id
         if (light.id === id) {
           // If it matches, create a new light object with the on property negated
@@ -26,11 +26,11 @@ export default function App({ Component, pageProps }) {
         }
         // If it doesn't match, return the original light object
         return light;
-      });
-    });
+      })
+    );
   }
 
-  function handleLightsOn() {
+  function handleAllLightssOn() {
     // Update the lightState by mapping over each light object
     setLightState(
       lightState.map((light) => {
@@ -41,15 +41,15 @@ export default function App({ Component, pageProps }) {
     );
   }
 
-  function handleLightsOff() {
-    // Update the lightState by mapping over each light object
-    setLightState(
-      lightState.map((light) => {
-        // Set the isOn property of each light object to false
-        light.isOn = false;
-        return light; // Return the updated light object
-      })
-    );
+  function handleAllLightsOff() {
+    // Update the lightState using the functional form of setState
+    setLightState((lightState) => {
+      // Map over each light object in the lightState array
+      return lightState.map((light) => {
+        // Create a new light object with the isOn property set to false
+        return { ...light, isOn: false };
+      });
+    });
   }
 
   const turnedOnLights = lightState.filter((light) => light.on);
@@ -59,10 +59,10 @@ export default function App({ Component, pageProps }) {
       <GlobalStyle />
       <Component
         {...pageProps}
-        lightsState={lightState}
+        curryLights={lightState}
         onToggleLight={handleToggleLight}
-        onLightsOff={handleLightsOff}
-        onLightsOn={handleLightsOn}
+        onLightsOff={handleAllLightsOff}
+        onLightsOn={handleAllLightssOn}
         lightsOn={turnedOnLights.length}
       />
     </Layout>
