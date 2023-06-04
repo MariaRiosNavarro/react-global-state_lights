@@ -1,7 +1,6 @@
-
 import { LightButton, Icon, Text, Name, State } from "./Light.styled";
 
-export default function Light({ name }) {
+export default function Light({ name, isOn, onToggleLight }) {
   // const [isOn, setIsOn] = useState(false);
 
   // function handleToggle() {
@@ -9,13 +8,7 @@ export default function Light({ name }) {
   // }
 
   return (
-    <LightButton
-      type="button"
-      onClick={() => {
-        handleToggle();
-      }}
-      isOn={isOn}
-    >
+    <LightButton type="button" onClick={onToggleLight} isOn={isOn}>
       <Icon isOn={isOn}>💡</Icon>
       <Text>
         <Name>{name}</Name>
