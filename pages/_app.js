@@ -35,7 +35,10 @@ export default function App({ Component, pageProps }) {
     setLightState(
       lightState.map((light) => {
         // Set the isOn property of each light object to true
-        light.isOn = true;
+
+        //I MUST TO CHANGE light.isON for light.on and now works!!
+        //I MUST TO CHANGE light.isON for light.on and now works!!
+        light.on = true;
         return light; // Return the updated light object
       })
     );
@@ -47,7 +50,10 @@ export default function App({ Component, pageProps }) {
       // Map over each light object in the lightState array
       return lightState.map((light) => {
         // Create a new light object with the isOn property set to false
-        return { ...light, isOn: false };
+
+        //I MUST TO CHANGE light.isON for light.on and now works!!
+        //I MUST TO CHANGE light.isON for light.on and now works!!
+        return { ...light, on: false };
       });
     });
   }
@@ -61,7 +67,7 @@ export default function App({ Component, pageProps }) {
         {...pageProps}
         curryLights={lightState}
         onToggleLight={handleToggleLight}
-        onALlLightsOff={handleAllLightsOff}
+        onAllLightsOff={handleAllLightsOff}
         onAllLightsOn={handleAllLightssOn}
         lightsOn={turnedOnLights.length}
       />
