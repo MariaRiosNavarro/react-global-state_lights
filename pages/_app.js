@@ -61,8 +61,8 @@ export default function App({ Component, pageProps }) {
         {...pageProps}
         curryLights={lightState}
         onToggleLight={handleToggleLight}
-        onLightsOff={handleAllLightsOff}
-        onLightsOn={handleAllLightssOn}
+        onALlLightsOff={handleAllLightsOff}
+        onAllLightsOn={handleAllLightssOn}
         lightsOn={turnedOnLights.length}
       />
     </Layout>

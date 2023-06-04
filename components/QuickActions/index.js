@@ -7,7 +7,7 @@ const StyledQuickActions = styled.div`
   gap: 16px;
 `;
 
-export default function QuickActions({ onLightsOff, onLightsOn, lightState }) {
+export default function QuickActions({ onAllLightsOn, onAllLightsOff }) {
   // Check if all lights are turned on
   // const allLightsOn = lightState.every((light) => light.isOn);
 
@@ -16,7 +16,7 @@ export default function QuickActions({ onLightsOff, onLightsOn, lightState }) {
       {/* Button to turn all lights off */}
       <Button
         type="button"
-        onClick={onLightsOff}
+        onClick={onAllLightsOff}
         // disabled={!lightState.length || !allLightsOn}
         // Disable the button if there are no lights or if all lights are already turned on
       >
@@ -26,7 +26,7 @@ export default function QuickActions({ onLightsOff, onLightsOn, lightState }) {
       {/* Button to turn all lights on */}
       <Button
         type="button"
-        onClick={onLightsOn}
+        onClick={onAllLightsOn}
         // disabled={!lightState.length || allLightsOn}
         // Disable the button if there are no lights or if not all lights are turned on
       >
