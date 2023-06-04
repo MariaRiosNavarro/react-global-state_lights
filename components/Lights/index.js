@@ -21,7 +21,8 @@ export default function Lights({ curryLights, onToggleLight }) {
           <Light
             id={light.id}
             name={light.name}
-            isOn={light.isOn}
+            //i have to change isOn={light.isOn} to isOn={light.on} and works the name change.. why?
+            isOn={light.on}
             onToggleLight={onToggleLight}
           />
         </li>
